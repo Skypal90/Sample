@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tilles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+   
+<!-- S1 -->
+    <definition name="baseTemplate" id="baseTemplate" template="/WEB-INF/layout/baseLayout.jsp">
+    <!-- <put-attribute name="title" value="${title}" /> -->
+    <put-attribute name="menu" value="/WEB-INF/layout/menu.jsp" />
+    <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+    <put-attribute name="body" value="${body}" />
+    <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+  </definition>
+        <!-- Mapping for Login Page -->
+<definition name="home" id="home" extends="baseTemplate">
+  <put-attribute name="body" value="/WEB-INF/jsp/home.jsp"/>
+  </definition>
+        <!-- Mapping for Login Page -->	
+  <definition name="login" id="login" extends="baseTemplate">
+    <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+     </definition>
+     
+        <!-- Mapping for Registration Page -->	
+  <definition name="registration" id="registration" extends="baseTemplate">
+    <put-attribute name="body" value="/WEB-INF/jsp/registration.jsp" />
+     </definition>
+        <!-- Mapping for Projectlist page -->	
+  <!-- <definition name="projectList" id="projectList" template="/WEB-INF/jsp/projectList.jsp"/> -->   
+    <definition name="projectList" id="projectList" extends="baseTemplate">
+  <put-attribute name="body" value="/WEB-INF/jsp/projectList.jsp"/>
+  </definition>
+<!--    -->
+<!--     <definition name="baseTemplate2" id="baseTemplate2" template="/WEB-INF/layout/baseLayout2.jsp"> -->
+<!--     <put-attribute name="title" value="${title}" /> -->
+<!--     <put-attribute name="body" value="${body}" /> -->
+<!--     <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" /> -->
+<!--   </definition> -->
+<!--  Mapping for Welcome Page -->	
+<!--    <definition name="welcome" id="welcome" extends="baseTemplate2"> -->
+<!--     <put-attribute name="body" value="/WEB-INF/jsp/welcome.jsp" /> -->
+<!--      </definition> -->
+<!--         Mapping for Login Page	 -->
+<!--   <definition name="login" id="login" extends="baseTemplate2"> -->
+<!--     <put-attribute name="body" value="/WEB-INF/jsp/body.jsp" /> -->
+<!--  Mapping for Registration Page	 -->
+<!--   <definition name="registration" id="registration" extends="baseTemplate"> -->
+<!--     <put-attribute name="body" value="/WEB-INF/jsp/body.jsp" /> -->
+<!--      </definition> -->
+     
+<!--      </definition> -->
+     
+     
+          
+        </tiles-definitions>
